@@ -25,7 +25,7 @@ jobs:
       - name: Build and Push Docker Image
         uses: docker/build-push-action@v5
         with:
-          context: .
+          context: ./simple-web
           push: true
           tags: |
             ${{ secrets.DOCKER_USERNAME }}/simple-web:latest
