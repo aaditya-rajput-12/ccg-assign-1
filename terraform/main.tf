@@ -59,15 +59,16 @@ resource "aws_security_group" "web_sg" {
 
 }
 
-resource "aws_instance" "web_server" {
+resource "aws_instance" "web_server_1" {
 
   ami           = var.ami_id
   instance_type = var.instance_type
+  key_name = var.key_pair_name
 
   security_groups = [aws_security_group.web_sg.name]
 
   tags = {
-    Name = "web-server"
+    Name = "web-server-1"
   }
 
 }

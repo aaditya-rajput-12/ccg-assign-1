@@ -27,3 +27,6 @@ variable "app_port" {
   default = 90
 }
 
+variable "key_pair_name" {
+  default = "ansible-key-3"
+}
